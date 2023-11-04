@@ -9,7 +9,11 @@ export default function Page() {
 
   useEffect(() => {
     if(confirm('Do you like to get number?')){
-      window.location.href = `tel:${phoneNumber}`
+      const phoneLink = document.createElement('a');
+      phoneLink.href = `tel:${phoneNumber}`;
+      document.body.appendChild(phoneLink);
+      phoneLink.click();
+      document.body.removeChild(phoneLink);
     } else {
       alert('Good luck!')
     }
