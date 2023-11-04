@@ -17,6 +17,6 @@ export default function Page() {
   }, [])
 
     return (
-      <a style={{ visibility: 'hidden' }} ref={linkRef} href={`tel:${phoneNumber}`}>{phoneNumber}</a>
+      <a ref={linkRef} href={`tel:${phoneNumber}`}>{phoneNumber}</a>
     )
   }
